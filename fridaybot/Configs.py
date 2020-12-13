@@ -144,10 +144,10 @@ if ENV:
         ANTISPAM_FEATURE = os.environ.get("ANTISPAM_FEATURE", "ENABLE")
         ASSISTANT_LOG = int(os.environ.get("ASSISTANT_LOG", False))
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/NotShroudX97/HyperFBot69"
+            "UPSTREAM_REPO", "https://github.com/NotShroudX97/HyperFusionX"
         )
         ALIVE_IMAGE = os.environ.get(
-            "ALIVE_IMAGE", "https://telegra.ph/file/93aa44901ce918908e80a.jpg"
+            "ALIVE_IMAGE", "https://telegra.ph/file/e87a3582666befd298835.jpg"
         )
         ASSISTANT_START_PIC = os.environ.get(
             "ASSISTANT_START_PIC",
