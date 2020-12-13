@@ -147,7 +147,7 @@ if ENV:
             "UPSTREAM_REPO", "https://github.com/NotShroudX97/HyperFusionX"
         )
         ALIVE_IMAGE = os.environ.get(
-            "ALIVE_IMAGE", "https://telegra.ph/file/e87a3582666befd298835.jpg"
+            "ALIVE_IMAGE", "https://telegra.ph/file/.jpg"
         )
         ASSISTANT_START_PIC = os.environ.get(
             "ASSISTANT_START_PIC",
