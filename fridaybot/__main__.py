@@ -52,8 +52,8 @@ if Config.ENABLE_ASSISTANTBOT == "ENABLE":
             start_assistant(shortname.replace(".py", ""))
     sed.info("Friday And Assistant Bot Have Been Installed Successfully !")
 else:
-    sed.info("Friday Has Been Installed Sucessfully !")
-    sed.info("You Can Visit @FridayOT For Any Support Or Doubts")
+    sed.info("HyperFusionX Has Been Installed Sucessfully !")
+    sed.info("You Can Visit @HyperUserBotXSupport For Any Support Or Doubts")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
