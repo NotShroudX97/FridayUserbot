@@ -31,7 +31,7 @@ requirements_path = path.join(
 async def gen_chlog(repo, diff):
     ch_log = "**ChangeLog** \n\n"
     for c in repo.iter_commits(diff):
-        ch_log += f"🔨 **#{c.count()} :** [{c.summary}]({UPSTREAM_REPO_URL}/commit/{c}) 👷 __{c.author}__\n"
+        ch_log += f"🔨 **#{c.count()} :** [{c.summary}]({UPSTREAM_REPO_URL}/commit/{c}) ☣️🤖☣️ __{c.author}__\n"
     return ch_log
 
 
@@ -110,7 +110,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "**Successfully updated!**\nBot is restarting, will be back up in a few seconds."
+                "**Successfully Updated!**\nHyperFusionXBot Is Restarting, Will Be Back Up In A Few Seconds!."
             )
     else:
         await event.edit("**Please set up** `HEROKU_API_KEY` **variable.**")
@@ -124,7 +124,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "**Soft Update Sucessfull, Please Wait For Some Time To Get This Process Completed.**"
+        "**Soft Update Successfull, Please Wait For Some Time To Get This Process Completed!.**"
     )
     # Spin a new instance of bot
     args = [sys.executable, "-m", "fridaybot"]
@@ -135,7 +135,7 @@ async def update(event, repo, ups_rem, ac_br):
 @friday.on(friday_on_cmd(pattern=r"update( now| deploy|$)"))
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("**Checking for updates, please wait...**")
+    await event.edit("**Checking For Updates, Please Wait...**")
     conf = event.pattern_match.group(1).strip()
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -184,14 +184,14 @@ async def upstream(event):
     """ - Special case for deploy - """
     if conf == "deploy":
         await event.edit(
-            "**Perfoming a Power Update, Please Wait. It Usually Takes 5 min.**"
+            "**Perfoming A Power Update, Please Wait. It Usually Takes 5 Minutes!.**"
         )
         await deploy(event, repo, ups_rem, ac_br, txt)
         return
 
     if changelog == "" and not force_update:
         await event.edit(
-            f"**Your userbot is up-to-date with `{UPSTREAM_REPO_BRANCH}`!**"
+            f"**Your HyperFusionX Is Up-To-Date With `{UPSTREAM_REPO_BRANCH}`!**"
         )
         return repo.__del__()
 
