@@ -36,9 +36,9 @@ async def gen_chlog(repo, diff):
 
 
 async def print_changelogs(event, ac_br, changelog):
-    changelog_str = f"**Updates available in {ac_br} branch!\n\n{changelog}"
+    changelog_str = f"**Updates Available In {ac_br} Branch!\n\n{changelog}"
     if len(changelog_str) > 4096:
-        await event.edit("**Changelog is too big, sending as a file.**")
+        await event.edit("**Changelog Is Too Big, Sending As A File.**")
         file = open("output.txt", "w+")
         file.write(changelog_str)
         file.close()
@@ -168,8 +168,8 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
-            f"**Looks like you are using your own custom branch: ({ac_br}). \n"
-            "Please switch to** `Alpha` **branch.**"
+            f"**Looks Like You Are Using Your Own Custom Branch: ({ac_br}). \n"
+            "Please Switch To** `Alpha` **Branch.**"
         )
         return repo.__del__()
     try:
@@ -204,11 +204,11 @@ async def upstream(event):
 
     if force_update:
         await event.edit(
-            "**Force-syncing to latest stable userbot code, please wait...**"
+            "**Force-Syncing To Latest Stable UserBot Code, Please Wait...**"
         )
 
     if conf == "now":
-        await event.edit("**Perfoming a quick update, please wait...**")
+        await event.edit("**Perfoming A Quick Update, Please Wait...**")
         await update(event, repo, ups_rem, ac_br)
     return
 
