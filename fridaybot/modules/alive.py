@@ -55,7 +55,7 @@ pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/No
 pm_caption += "➥ **Copyright** : By [NotShroudX97@Github](GitHub.com/NotShroudX97)\n"
 pm_caption += "➥ **Check Stats By Doing** `.stat`. \n\n"
 
-pm_caption += "➥ **[Join Our Support Group](t.me//@HyperUserBotXSupport)"
+pm_caption += "♨️ [Join Our Support Group](t.me//HyperUserBotXSupport)"
 
 
 @friday.on(friday_on_cmd(pattern=r"alive"))
